@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Pokédex @EslebanPerez</title>
+</head>
+<body>
+    
+
+    <div class="pokedex">
+        <div class="poke-left">
+            <div class="botones">
+                <div class="big-circle">
+                    <div class="twinkle-circle"></div>
+                </div>
+                <div style="background-color: #ef0707;" class="small-button"></div>
+                <div style="background-color: #E2E614;" class="small-button"></div>
+                <div style="background-color: #84e614;" class="small-button"></div>
+            </div>
+            <div class="image-buttons">
+                <div class="poke-image-margin">
+                    <div class="ligths">
+                        <div style="background-color: #ef0707;" class="small-button"></div>
+                        <div style="background-color: #ef0707;" class="small-button"></div>
+                    </div>
+                    <div class="poke-image">
+                        <img src="./assets/pokeball.png" id="pokeImg" alt="" width="150px">
+                        <h4 id="pokemonName"></h4>
+                    </div>
+                    <div class="buttons-screen">
+                        <div style="background-color: #ef0707;" class="small-button"></div>
+                        <div>
+                            <div class="bocina"></div>
+                            <div class="bocina"></div>
+                            <div class="bocina"></div>
+                            <div class="bocina"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                <div class="buttons-botton-left">
+                    <div class="buttons-botton">
+                        <div class="small-button"></div>
+                        <div style="background-color: #ef0707;" class="botoncitos"></div>
+                        <button onclick="fetchPokemon()" id="buscar-button" name="buscar-button" style="background-color: #84e614;" class="botoncitos">Buscar</button>
+                        <!-- <div style="background-color: #84e614;"class="botoncitos"></div> -->
+                        
+                    </div>
+                    <div >
+                        <input class="search" type="text" placeholder="Ingresa pokémon" id="pokeName" name="pokeName">
+                    </div>
+               </div>
+               <div class="buttons-botton-right">
+                   <div class="cross">
+                   </div>
+               </div>
+            </div>
+            </div>
+        </div>
+        <div class="poke-right">
+            <div class="screen2">
+                <div class="tipo">
+                    <p>Tipo</p>
+                    <div class="tipo-color"  ><p id="pokemonType"></p></div>
+                </div>
+                <!-- <div class="tipo">
+                    <p>Franqueza</p>
+                    <div class="tipo-color"><p>ELECTRIC</p></div>
+                    <div class="tipo-color"><p>GRASS</p></div>
+                </div> -->
+                <div class="abilities">
+                    <!-- <h2 class="text-center text-lg-left">Mis Habilidades</h2> -->
+                    <div class="progress">
+                        <p>
+                            <b>HP</b>
+                            <b>90%</b>
+                        </p>
+                        <progress value="90" min="0" max="100"></progress>
+                    </div>
+                    <div class="progress">
+                        <p>
+                            <b>Attack</i></b>
+                            <b>85%</b>
+                        </p>
+                        <progress value="85" min="0" max="100"></progress>
+                    </div>
+                    <div class="progress">
+                        <p>
+                            <b>Defense</b>
+                            <b>80%</b>
+                        </p>
+                        <progress value="80" min="0" max="100"></progress>
+                    </div>
+                    <div class="progress">
+                        <p>
+                            <b>SA</b>
+                            <b>75%</b>
+                        </p>
+                        <progress value="75" min="0" max="100"></progress>
+                    </div>
+                    <div class="progress">
+                        <p>
+                            <b>SDf</b>
+                            <b>60%</b>
+                        </p>
+                        <progress value="60" min="0" max="100"></progress>
+                    </div>
+                    <div class="progress">
+                        <p>
+                            <b>Speed</b>
+                            <b>60%</b>
+                        </p>
+                        <progress value="60" min="0" max="100"></progress>
+                    </div>
+                </div>
+
+            </div>
+            <div class="keyboard">
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+            </div>
+            <div class="mini-buttons">
+                <div class="mini"></div>
+                <div class="mini"></div>       
+            </div>
+            <div class="white" >
+                <div class="white-button"></div>
+                <div class="white-button"></div>
+            
+            </div>
+            <div class="final-buttons">
+                <div class="description">Peso: <p id="pokemonWeight"></p></div>
+                <div class="description">Altura: <p id="pokemonHeight"></p></div>
+            </div>
+        </div>
+        
+       
+    </div>
+</body>
+    
+<script src="./script.js"></script>
+</html>
