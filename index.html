@@ -30,9 +30,10 @@
                         <div style="background-color: #ef0707;" class="small-button"></div>
                         <div style="background-color: #ef0707;" class="small-button"></div>
                     </div>
-                    <div class="poke-image">
+                    <div class="poke-image" id="poke-image">
+                        
                         <img src="./assets/pokeball.png" id="pokeImg" alt="" width="150px">
-                        <h4 id="pokemonName"></h4>
+                        <h4> <span id="pokemonID"></span> <span id="pokemonName"></span></h4>
                     </div>
                     <div class="buttons-screen">
                         <div style="background-color: #ef0707;" class="small-button"></div>
@@ -66,10 +67,12 @@
         </div>
         <div class="poke-right">
             <div class="screen2">
-                <div class="tipo">
-                    <p>Tipo</p>
-                    <div class="tipo-color"  ><p id="pokemonType"></p></div>
+                <div class="tipo" >
+                    <p>Tipo:</p>
+                    <!-- <div class="tipo-color" id="pokemonType" ></div> -->
+                    <ul id="listTypes"></ul>
                 </div>
+
                 <!-- <div class="tipo">
                     <p>Franqueza</p>
                     <div class="tipo-color"><p>ELECTRIC</p></div>
@@ -138,6 +141,7 @@
                 <div class="mini"></div>
                 <div class="mini"></div>       
             </div>
+            <div class="small-button button-right" style="background-color: #E2E614;"></div>
             <div class="white" >
                 <div class="white-button"></div>
                 <div class="white-button"></div>

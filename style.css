@@ -3,9 +3,11 @@
 *::before {
   box-sizing: inherit;
 }
+
 *{
     font-family: 'Press Start 2P', cursive;
 }
+
 :root {
     --first-color: #ce1131;
     --gradient: linear-gradient(
@@ -14,8 +16,8 @@
         rgba(204,0,14, 1) 100%
       );
     --first-alpha-color: #eaf1fe;
-    --second-color: #1f3e72;
-    --third-color: #6d7b93;
+    --second-color: #dfd4d8;
+    --third-color: white;
     --white-color: #fff;
     --white-alpha-color: rgb(255, 255, 255, 0.7);
     --gray-first-color: #e5e4f5;
@@ -26,6 +28,7 @@
     --max-width: 1200px;
     --header-height: 4rem;
 }
+
 html{
   box-sizing: border-box;
   font-family: var(--font);
@@ -33,6 +36,7 @@ html{
   color: var(--third-color);
   scroll-behavior: smooth;
 }
+
 body {
     background-color: #f1f6f8;
     margin: 0;
@@ -42,13 +46,13 @@ body {
     background: linear-gradient(90deg, rgba(93,199,251,1) 0%, rgba(58,231,248,1) 100%);
 
 }
+
 @keyframes twinkle {
     0%{
         opacity:.0.8;
     }
     100%{
         opacity:0;
-
     }
 }
 
@@ -62,9 +66,8 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     align-items: flex-end;
-
-
 }
+
 .poke-left{
     background-color: var(--first-color);
     width: 500px;
@@ -81,7 +84,6 @@ body {
     background-color: var(--first-color);
     width: 480px;
     height: 520px;
-
     border-bottom-right-radius: 2rem ;
     border-top-right-radius: 2rem;
     box-shadow: 8px 8px 0 8px #951828;
@@ -101,6 +103,7 @@ body {
     box-shadow:inset 0px 0px 0px 7px rgb(44, 3, 3,30%);
     border: 10px solid white;
 }
+
 .twinkle-circle{
     width: 80px;
     height: 80px;
@@ -112,6 +115,7 @@ body {
     animation: twinkle 0.6s infinite;
 
 }
+
 .small-button{
     width: 35px;
     height: 35px;
@@ -138,10 +142,12 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .small-button{
 
     border: 5px solid #951828;
 }
+
 .image-buttons {
     /* padding: 0 3rem; */
     margin: 1rem;
@@ -186,7 +192,7 @@ body {
 .controls{
     display: flex;
     flex-direction: row;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
     justify-content: space-evenly;
 }
 .buttons-botton{
@@ -199,6 +205,7 @@ body {
     background: #0b6dff;
     height: 60px;
     width: 60px;
+    margin: 0 1rem;;
 }
 .botoncitos{
     width: 100px;
@@ -210,7 +217,9 @@ body {
      display: inline-block;
     font-size: 10px;
 }
-
+button:hover{
+    background-color: transparent;
+}
 
 .search{
     width: 200px;
@@ -220,16 +229,10 @@ body {
     margin: 0 1rem 1rem 6rem;
     padding: 12px 20px;
     font-size: 1rem;
+    text-align: center;
     
 }
-/* .cross{
-    width: 96px;
-    height: 96px;
-    position: absolute;
 
-} */
-.buttons-botton-right{
-}
 .cross {
     background: #262626;
     height: 100px;
@@ -264,7 +267,24 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 1rem;
+    padding: 1rem 3rem ;
+}
+
+.tipo ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+.tipo li{
+    padding: 1rem;
+    color: white;
+    /* background-color: #0b6dff; */
+    border-radius: 1rem;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .tipo-color{
@@ -279,7 +299,6 @@ body {
 }
 
 .abilities{
-    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 70px;
@@ -314,7 +333,14 @@ body {
     display: flex;
     flex-direction: row;
 }
+.button-right{
+    position: absolute;
+    right: 70px;
+    top: 380px;
+    width: 50px;
+    height: 50px;
 
+}
 .mini{
     width: 70px;
     height: 15px;
@@ -327,7 +353,7 @@ body {
 .white{
     display: flex;
     flex-direction: row;
-    padding: 1.5rem 5rem;
+    padding: 2.5rem 5rem 0;
 }
 .white-button{
     width: 60px;
@@ -340,7 +366,7 @@ body {
 .final-buttons{
     display: flex;
     flex-direction: row;
-    padding: 0rem 3rem;
+    padding: 2.5rem 3rem;
     justify-content: space-around;
     
 }
@@ -356,6 +382,5 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 1rem;
-    
+    padding: 1rem;   
 }
