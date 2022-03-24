@@ -1,6 +1,8 @@
 const pokeName = document.getElementById("pokeName");
 const pokeImg = document.getElementById("poke-image");
 const pokeTypes = document.getElementById("listTypes");
+const pokeStats = document.getElementById("poke-stats");
+
 
 pokeName.addEventListener("keyup", function(event) {
     //Si la tecla es "Enter" entonces...
@@ -79,6 +81,9 @@ const fetchPokemon = () => {
         setCardColor(data.types);
         renderPokemonTypes(data.types);
 
+        let pokemonStats = data.stats;
+        pokemon_stats(data.stats);
+        console.log(pokemon_stats);
         
     })
 }
@@ -107,29 +112,6 @@ const pokemon_ID = (pokemonID) => {
     pokemon_ID.textContent = `# ${pokemonID}`;
 }
 
-/** mandar a imprimir Nombre en el Front 
-const setListTypes = (types) => {
-    types.forEach(type => {
-        console.log(type.type.name);
-        const lisTypes = document.getElementById('listTypes')
-        let li = document.createElement('li')
-        li.innerText = type.type.name.toUpperCase()
-        lisTypes.append(li);
-    });  
-}
-*/
-const renderPokemonTypes = types => {
-    pokeTypes.innerHTML = '';
-    types.forEach(type => {
-        const typeTextElement = document.createElement("li");
-        typeTextElement.style.background = typeColors[type.type.name];
-        
-        typeTextElement.textContent = type.type.name;
-        pokeTypes.appendChild(typeTextElement);
-
-
-    });
-}
 const pokemon_weight = (pokemonWeight) =>{
     let pokemonPeso = pokemonWeight/10;
     console.log( 'Peso: ' + pokemonPeso + ' Kg')
@@ -144,6 +126,47 @@ const pokemon_height = (pokemonHeight) =>{
     pokemon_height.textContent = `${pokemonAltura} m`;
 }
 
+const renderPokemonTypes = types => {
+    pokeTypes.innerHTML = '';
+    types.forEach(type => {
+        const typeTextElement = document.createElement("li");
+        typeTextElement.style.background = typeColors[type.type.name];
+        
+        typeTextElement.textContent = type.type.name;
+        pokeTypes.appendChild(typeTextElement);
+
+
+    });
+}
+
+const pokemon_stats = stats => {
+   pokeStats.innerHTML = '';
+    stats.forEach( stat  => {
+        const statElement = document.createElement('div');
+        statElement.setAttribute("class", "ability");
+
+        const statElementName = document.createElement('p');
+        statElementName.setAttribute("class", "div1");
+        const statElementAmountText = document.createElement('p');
+        statElementAmountText.setAttribute("class", "div2");
+        const statElementAmount = document.createElement('progress');
+        statElementAmount.setAttribute("class", "div3");
+            statElementAmount.setAttribute("value", stat.base_stat);
+            statElementAmount.setAttribute("max", "100");
+
+        statElementName.textContent = stat.stat.name;
+        console.log(statElementName)
+        statElementAmountText.textContent = `${stat.base_stat}%`;
+
+        statElementAmount.textContent = stat.base_stat;
+        console.log(statElementAmount)
+        statElement.appendChild(statElementName);
+        statElement.appendChild(statElementAmountText);
+        statElement.appendChild(statElementAmount);
+        pokeStats.appendChild(statElement);
+        
+    } );
+}
 
 
 //pokeImage("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png");

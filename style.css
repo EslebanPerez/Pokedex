@@ -38,6 +38,7 @@ html{
 }
 
 body {
+    zoom: 90%;
     background-color: #f1f6f8;
     margin: 0;
     overflow-x: hidden;
@@ -148,6 +149,7 @@ body {
     border: 5px solid #951828;
 }
 
+
 .image-buttons {
     /* padding: 0 3rem; */
     margin: 1rem;
@@ -207,6 +209,8 @@ body {
     width: 60px;
     margin: 0 1rem;;
 }
+
+
 .botoncitos{
     width: 100px;
     height: 15px;
@@ -256,10 +260,10 @@ button:hover{
 
 .screen2{
     width: 80%;
-    height: 200px;
+    height: 220px;
     background-color: #032D29;
     border-radius: 1.5rem;
-    margin: 3rem auto;
+    margin: 3rem auto 2rem;
 }
 
 .tipo{
@@ -267,7 +271,7 @@ button:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 1rem 3rem ;
+    padding: 1rem 3rem 0 ;
 }
 
 .tipo ul{
@@ -298,12 +302,54 @@ button:hover{
 
 }
 
-.abilities{
+#poke-stats{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 70px;
+    margin: 0 2rem;
+    
 }
 
+
+.ability {
+    text-transform: capitalize;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 2 / 1 / 3 / 3; }
+.div2{
+    text-align: right;
+}
+progress {
+    grid-column: span 2;
+    width: 100%;
+    height: 1rem;
+    background-color: var(--gray-color);
+
+    color: #39d350;
+}
+
+progress {
+    color: lightblue;
+  }
+  
+  progress::-moz-progress-bar {
+    background: lightcolor;
+  }
+  
+  progress::-webkit-progress-value {
+    background: #55d11c;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: #c9c9c9;
+  }
 
 
 .keyboard{
@@ -336,7 +382,7 @@ button:hover{
 .button-right{
     position: absolute;
     right: 70px;
-    top: 380px;
+    top: 400px;
     width: 50px;
     height: 50px;
 
