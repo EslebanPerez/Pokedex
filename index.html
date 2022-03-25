@@ -10,7 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Pokédex @EslebanPerez</title>
+
+    <meta name="description" content="Hola bienvenid@ a mi Pokedex, soy Esleban Pérez, Desarrollador web">
+    <link rel="canonical" href="https://eslebanperez.github.io/Pokedex/">
+    <link rel="favicon" href="https://eslebanperez.github.io/Pokedex/assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://eslebanperez.github.io/Pokedex/assets/favicon.ico">
+    <meta property="og:description" name="twitter:description" content="Hola bienvenid@ a mi Portafolio Profesional, soy Esleban Pérez, Desarrollador web">
+    <meta name="theme-color" content="#BD0F34">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:title" name="twitter:title" content="Pokedex - Esleban Pérez">
+    <meta property="og:image" name="twitter:image" content="https://eslebanperez.github.io/Pokedex/assets/pokedex-capture.PNG">
+    <meta property="og:url" name="twitter:ul" content="https://eslebanperez.github.io/Pokedex/">
 </head>
+
 <body>
     
 
@@ -48,10 +61,14 @@
                 <div class="controls">
                 <div class="buttons-botton-left">
                     <div class="buttons-botton">
-                        <div class="small-button"></div>
+                        <button onclick="fetchPokemon()" id="buscar-button" name="buscar-button"  class="small-button">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.4038 17.8776C18.9354 17.429 18.4796 16.9675 18.0368 16.4936C17.6648 16.1156 17.4408 15.8406 17.4408 15.8406L14.6408 14.5036C15.7618 13.2323 16.3805 11.5956 16.3808 9.90063C16.3808 6.04163 13.2408 2.90063 9.3808 2.90063C5.5208 2.90063 2.3808 6.04163 2.3808 9.90063C2.3808 13.7596 5.5208 16.9006 9.3808 16.9006C11.1438 16.9006 12.7508 16.2406 13.9838 15.1616L15.3208 17.9616C15.3208 17.9616 15.5958 18.1856 15.9738 18.5576C16.3608 18.9206 16.8698 19.4116 17.3578 19.9246L18.7158 21.3166L19.3198 21.9626L21.4408 19.8416L20.7948 19.2376C20.4158 18.8656 19.9098 18.3716 19.4038 17.8776V17.8776ZM9.3808 14.9006C6.6238 14.9006 4.3808 12.6576 4.3808 9.90063C4.3808 7.14363 6.6238 4.90063 9.3808 4.90063C12.1378 4.90063 14.3808 7.14363 14.3808 9.90063C14.3808 12.6576 12.1378 14.9006 9.3808 14.9006Z" fill="#063a88"/>
+                            </svg>
+                        </button>
+                        <!-- <div class="small-button"></div> -->
                         <div style="background-color: #ef0707;" class="botoncitos"></div>
-                        <button onclick="fetchPokemon()" id="buscar-button" name="buscar-button" style="background-color: #84e614;" class="botoncitos">Buscar</button>
-                        <!-- <div style="background-color: #84e614;"class="botoncitos"></div> -->
+                        <div style="background-color: #84e614;"class="botoncitos"></div>
                         
                     </div>
                     <div >
@@ -92,13 +109,14 @@
                 <div class="key"></div>
             </div>
             <div class="mini-buttons">
-                <div class="mini"></div>
+                <div class="mini" ></div>
                 <div class="mini"></div>       
             </div>
             <div class="small-button button-right" style="background-color: #E2E614;"></div>
             <div class="white" >
-                <div class="white-button"></div>
-                <div class="white-button"></div>
+                
+                <div id="poke-moves"></div>
+                <!-- <div class="white-button"></div> -->
             
             </div>
             <div class="final-buttons">

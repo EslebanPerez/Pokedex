@@ -2,7 +2,7 @@ const pokeName = document.getElementById("pokeName");
 const pokeImg = document.getElementById("poke-image");
 const pokeTypes = document.getElementById("listTypes");
 const pokeStats = document.getElementById("poke-stats");
-
+const pokeMoves = document.getElementById("poke-moves");
 
 pokeName.addEventListener("keyup", function(event) {
     //Si la tecla es "Enter" entonces...
@@ -79,11 +79,18 @@ const fetchPokemon = () => {
         
         //setListTypes(data.types);
         setCardColor(data.types);
+        console.log(renderPokemonTypes);
         renderPokemonTypes(data.types);
 
         let pokemonStats = data.stats;
         pokemon_stats(data.stats);
         console.log(pokemon_stats);
+
+        let pokemonMoves = data.moves;
+        pokemon_moves(data.moves);
+
+        console.log(pokemonMoves);
+        console.log(data.moves[1].move.name);
         
     })
 }
@@ -131,11 +138,8 @@ const renderPokemonTypes = types => {
     types.forEach(type => {
         const typeTextElement = document.createElement("li");
         typeTextElement.style.background = typeColors[type.type.name];
-        
         typeTextElement.textContent = type.type.name;
         pokeTypes.appendChild(typeTextElement);
-
-
     });
 }
 
@@ -168,5 +172,22 @@ const pokemon_stats = stats => {
     } );
 }
 
+const pokemon_moves = (moves) =>{
+    pokeMoves.innerHTML = '';
+    moves.forEach( move  => {
+        const MovesElement = document.createElement('div');
+        MovesElement.setAttribute("class", "moves");
+
+        const MoveElementName = document.createElement('li');
+        //MoveElementName.setAttribute("class", "div1");
+
+        MoveElementName.textContent = move.move.name;
+        console.log(MoveElementName);
+
+        pokeMoves.appendChild(MoveElementName);
+        //pokeMoves.appendChild(MovesElement);
+    } );
+
+}
 
 //pokeImage("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png");

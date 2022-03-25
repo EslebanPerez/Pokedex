@@ -10,21 +10,10 @@
 
 :root {
     --first-color: #ce1131;
-    --gradient: linear-gradient(
-        90deg,
-        rgba(247,3,3, 1) 0%,
-        rgba(204,0,14, 1) 100%
-      );
-    --first-alpha-color: #eaf1fe;
     --second-color: #dfd4d8;
     --third-color: white;
-    --white-color: #fff;
-    --white-alpha-color: rgb(255, 255, 255, 0.7);
+    --gradient-color: linear-gradient(90deg, rgba(93,199,251,1) 0%, rgba(58,231,248,1) 100%);
     --gray-first-color: #e5e4f5;
-    --gray-second-color: #f0f0f9;
-    --yellow-color: #ffd012;
-    --yelow-alpha-color: #fffcf0;
-    --font: "Raleway", sans-serif;
     --max-width: 1200px;
     --header-height: 4rem;
 }
@@ -39,13 +28,11 @@ html{
 
 body {
     zoom: 90%;
-    background-color: #f1f6f8;
     margin: 0;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(93,199,251,1) 0%, rgba(58,231,248,1) 100%);
-
+    background: var(--gradient-color);
 }
 
 @keyframes twinkle {
@@ -123,6 +110,11 @@ body {
     margin-left:  1rem;
     border-radius: 50%;
     box-shadow:inset 0px 0px 0px 7px rgb(44, 3, 3,30%);
+    
+}
+button:hover{
+  transition: all 0.25s;
+  transform: translateY(-3px);
 }
 
 .poke-image-margin{
@@ -172,6 +164,7 @@ body {
     text-align: center;
     border-radius: 1.5rem;
     background-color: #F1F2D3 ;
+    
 }
 .buttons-screen{
     display: flex;
@@ -230,7 +223,7 @@ button:hover{
     height: 70px;
     background: #39d350;
     border-radius: 1rem;
-    margin: 0 1rem 1rem 6rem;
+    margin: 0 1rem 1rem 9rem;
     padding: 12px 20px;
     font-size: 1rem;
     text-align: center;
@@ -331,13 +324,7 @@ progress {
     width: 100%;
     height: 1rem;
     background-color: var(--gray-color);
-
-    color: #39d350;
 }
-
-progress {
-    color: lightblue;
-  }
   
   progress::-moz-progress-bar {
     background: lightcolor;
@@ -399,7 +386,7 @@ progress {
 .white{
     display: flex;
     flex-direction: row;
-    padding: 2.5rem 5rem 0;
+    padding: 1.5rem 5rem 0;
 }
 .white-button{
     width: 60px;
@@ -412,7 +399,7 @@ progress {
 .final-buttons{
     display: flex;
     flex-direction: row;
-    padding: 2.5rem 3rem;
+    padding: 1rem 3rem;
     justify-content: space-around;
     
 }
@@ -429,4 +416,33 @@ progress {
     flex-direction: row;
     align-items: center;
     padding: 1rem;   
+}
+
+#poke-moves{
+    display: block;
+    float: left;
+    width: 55%;
+
+    
+    height: 70px;
+    box-shadow: -5px 4px 0 0px #3031334d;
+    border-radius: 0.5rem;
+    margin: 0.3rem;
+
+    background-color: #032D29;
+    /* border-left: solid 1px #cccccc;
+    border-right: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+    padding-bottom: 10px;
+    background-color: #ffffff; */
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+#poke-moves li{
+   
+    color: #F6D80D;
+    margin:1rem;
+    text-transform: capitalize;
 }
